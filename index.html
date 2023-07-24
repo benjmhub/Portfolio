@@ -346,6 +346,32 @@ lazyImages.forEach(image => {
 });
 
 </script>
+<script>
+    // Function to update the position of the profile picture on scroll
+function updateProfilePicturePosition() {
+  const profilePicture = document.querySelector(".profile-picture");
+  const header = document.querySelector("header");
+
+  const headerHeight = header.offsetHeight;
+  const scrollTop = window.scrollY;
+
+  // Calculate the top position for the profile picture
+  const topPosition = Math.min(headerHeight - 50, Math.max(20, 20 - scrollTop));
+
+  profilePicture.style.top = topPosition + "px";
+}
+
+// Event listener for the scroll event
+window.addEventListener("scroll", () => {
+  updateProfilePicturePosition();
+});
+
+// Call the function on page load to set the initial position of the profile picture
+window.addEventListener("load", () => {
+  updateProfilePicturePosition();
+});
+
+</script>
        
 </body>
 </body>
