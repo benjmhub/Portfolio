@@ -151,6 +151,22 @@
                 max-width: 100%;
             }
         }
+
+        /* Responsive styles for mobile devices */
+        @media screen and (max-width: 480px) {
+            .nav-btn {
+                font-size: 14px; /* Adjust font size for smaller screens */
+            }
+
+            .skills-content {
+                gap: 10px; /* Adjust the gap between skill categories for smaller screens */
+            }
+
+            .skill-card,
+            .testimonial {
+                padding: 10px; /* Adjust padding for smaller screens */
+            }
+        }
     </style>
     </head>
 <body>
@@ -709,8 +725,8 @@ if (section) {
 
 </script>
 <script>
-   // Smooth scroll on navigation click
-   const navLinks = document.querySelectorAll('.nav-btn');
+    // Smooth scroll on navigation click
+    const navLinks = document.querySelectorAll('.nav-btn');
             navLinks.forEach(link => {
                 link.addEventListener('click', (event) => {
                     event.preventDefault();
@@ -727,7 +743,6 @@ if (section) {
                     section.scrollIntoView({ behavior: 'smooth' });
                 }
             }
-
 </script>
 </body>
 </body>
