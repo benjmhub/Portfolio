@@ -1,4 +1,4 @@
- 
+  
 /* Reset some default styles */
 body, h1, h2, h3, p, ul, li, blockquote, form, label, input, textarea, button {
     margin: 0;
@@ -1513,6 +1513,9 @@ footer {
 
 /* styles.css */
 
+ 
+/* styles.css */
+
 /* ... (previously defined styles) ... */
 
 /* Testimonials Section */
@@ -1541,7 +1544,6 @@ footer {
     /* Adjust styles for tablet and mobile devices here */
 
     .testimonial {
-        flex: 1 1 100%; /* Make each testimonial card take up the full width on small screens */
-        max-width: 100%; /* Remove the maximum width restriction */
+        width: 100%; /* Make each testimonial card take up the full width on small screens */
     }
 }
