@@ -3,9 +3,9 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ben Muhire - Software Engineer Portfolio</title>
-        <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Muhire - Software Engineer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     </head>
 <body>
     <div class="container">
@@ -16,30 +16,31 @@
         <img src="your_profile_picture.jpg" alt="Your Name">
     </div>
      <!-- Navigation Bar -->
-     <nav>
+    <nav>
         <div class="nav-links">
-            <button class="nav-btn" onclick="scrollToSection('#home')">Home</button>
-            <button class="nav-btn" onclick="scrollToSection('#about')">About</button>
-            <button class="nav-btn" onclick="scrollToSection('#skills')">Skills</button>
-            <button class="nav-btn" onclick="scrollToSection('#projects')">Projects</button>
-            <button class="nav-btn" onclick="scrollToSection('#testimonials')">Testimonials</button>
-            <button class="nav-btn" onclick="scrollToSection('#contact')">Contact</button>
+          <button class="nav-btn" onclick="scrollToSection('#home')">Home</button>
+          <button class="nav-btn" onclick="scrollToSection('#about')">About</button>
+          <button class="nav-btn" onclick="scrollToSection('#skills')">Skills</button>
+          <button class="nav-btn" onclick="scrollToSection('#projects')">Projects</button>
+          <button class="nav-btn" onclick="scrollToSection('#testimonials')">Testimonials</button>
+          <button class="nav-btn" onclick="scrollToSection('#contact')">Contact</button>
         </div>
-    </nav>
+      </nav>
+      
     
     <!-- Your other sections go here -->
     
     
       
      <!-- Home Section -->
-     <section id="home" class="grid" class="section">
+     <section id="home" class="grid section">
         <div class="home-content">
             <h1>Welcome to My Software Engineer Portfolio</h1>
             <p>Discover the amazing work I've done.</p>
         </div>
     </section>
      <!-- About Section -->
-     <section id="about" class="section">
+     <section id="about" class="grid section">
         <div class="about-content">
             <div class="profile-details">
                 <h2>About Me</h2>
@@ -49,7 +50,7 @@
     </section>
 
      <!-- Skills Section -->
-     <section id="skills" class="grid" class="section">
+     <section id="skills"  class="grid section">
             <h2>Skills</h2>
             <div class="skills-slider">
             <div class="skills-content">
@@ -150,7 +151,7 @@
     </section>
     <!-- Projects Section -->
     <!-- Projects Section -->
-    <section id="projects" class="grid" class="section">
+    <section id="projects"  class="grid section">
         <h2>My Projects</h2>
         <div class="projects-content">
             <div class="project">
@@ -164,7 +165,7 @@
             <!-- Add other projects -->
     </section>
       <!-- Testimonials Section -->
-      <section id="testimonials" class="grid" class="section">
+      <section id="testimonials" class="grid section">
         <div class="testimonials-content">
             <div class="testimonial">
                 <img src="testimonial1.jpg" alt="Testimonial 1">
@@ -182,7 +183,7 @@
         </div>
     </section>
     <!-- Contact Section -->
-<section id="contact" class="grid" class="section">
+<section id="contact" class="grid section">
     <div class="contact-content">
         <div class="contact-form">
             <h2>Contact Me</h2>
@@ -208,8 +209,11 @@
 </div>
      <!-- JavaScript Code -->
      <script>
-        // Smooth scroll on navigation click
-        const navLinks = document.querySelectorAll('.nav-link');
+      
+</script>
+<script>
+// Smooth scroll on navigation click
+const navLinks = document.querySelectorAll('.nav-btn'); // Update to use the correct class
         navLinks.forEach(link => {
             link.addEventListener('click', (event) => {
                 event.preventDefault();
@@ -293,75 +297,27 @@
             animateOnScrollContinuous();
             prevScrollY = scrolled;
         });
-    </script>
-<script>
-     // Intersection Observer options
-const observerOptions = {
-    rootMargin: '0px',
-    threshold: 0.3
-};
 
-// Intersection Observer callback
-const animateOnScroll = (entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-        } else {
-            entry.target.classList.remove('active');
-        }
-    });
-};
+        // Lazy loading of images
+        const lazyImages = document.querySelectorAll('img[data-src]');
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.setAttribute('src', img.getAttribute('data-src'));
+                    img.onload = () => {
+                        img.removeAttribute('data-src');
+                    };
+                    imageObserver.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '100px'
+        });
 
-// Create Intersection Observer for sections
-const sections = document.querySelectorAll('.section');
-const sectionObserver = new IntersectionObserver(animateOnScroll, observerOptions);
-sections.forEach(section => {
-    sectionObserver.observe(section);
-});
-
-// Smooth scroll on navigation click
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach(link => {
-    link.addEventListener('click', (event) => {
-        event.preventDefault();
-        const targetSection = document.querySelector(link.getAttribute('href'));
-        targetSection.scrollIntoView({ behavior: 'smooth' });
-    });
-});
-
-// Lazy loading of images
-const lazyImages = document.querySelectorAll('img[data-src]');
-const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const img = entry.target;
-            img.setAttribute('src', img.getAttribute('data-src'));
-            img.onload = () => {
-                img.removeAttribute('data-src');
-            };
-            imageObserver.unobserve(img);
-        }
-    });
-}, {
-    rootMargin: '100px'
-});
-
-lazyImages.forEach(image => {
-    imageObserver.observe(image);
-});
-
-</script>
-<script>
-    function scrollToSection(sectionId) {
-    const section = document.querySelector(sectionId);
-    if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-
-</script>
-<script>
-
+        lazyImages.forEach(image => {
+            imageObserver.observe(image);
+        });
 </script>
        
 </body>
