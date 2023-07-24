@@ -319,7 +319,269 @@ const navLinks = document.querySelectorAll('.nav-btn'); // Update to use the cor
             imageObserver.observe(image);
         });
 </script>
-       
+   
+
+<script>
+    // Smooth scroll on navigation click
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetSection = document.querySelector(link.getAttribute('href'));
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // Intersection Observer options
+    const observerOptions = {
+        rootMargin: '0px',
+        threshold: 0.3
+    };
+
+    // Intersection Observer callback
+    const animateOnScroll = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            } else {
+                entry.target.classList.remove('active');
+            }
+        });
+    };
+
+    // Create Intersection Observer for sections
+    const sections = document.querySelectorAll('section');
+    const sectionObserver = new IntersectionObserver(animateOnScroll, observerOptions);
+    sections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+
+    // Continuous scroll animation for elements with .animate-fade-in-up class
+    const animatedElements = document.querySelectorAll('.animate-fade-in-up');
+    let prevScrollY = window.scrollY;
+    const animateOnScrollContinuous = () => {
+        animatedElements.forEach(element => {
+            const distanceToTop = element.getBoundingClientRect().top;
+            const elementHeight = element.clientHeight;
+            const triggerPoint = window.innerHeight - elementHeight * 0.5;
+
+            if (distanceToTop <= triggerPoint && distanceToTop >= -elementHeight * 0.5) {
+                element.classList.add('active');
+            } else {
+                element.classList.remove('active');
+            }
+        });
+    };
+
+    // Call the function on initial load and on scroll
+    animateOnScrollContinuous();
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+
+        if (scrolled > prevScrollY) {
+            // Scrolling down
+            sections.forEach(section => {
+                const distanceToTop = section.getBoundingClientRect().top;
+                const elementHeight = section.clientHeight;
+
+                if (distanceToTop <= window.innerHeight - elementHeight * 0.5 && distanceToTop >= -elementHeight * 0.5) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+        } else {
+            // Scrolling up
+            sections.forEach(section => {
+                const distanceToBottom = section.getBoundingClientRect().bottom;
+                const elementHeight = section.clientHeight;
+
+                if (distanceToBottom <= window.innerHeight + elementHeight * 0.5 && distanceToBottom >= elementHeight * 0.5) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+        }
+
+        animateOnScrollContinuous();
+        prevScrollY = scrolled;
+    });
+</script>
+
+<script>
+    // Smooth scroll on navigation click
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetSection = document.querySelector(link.getAttribute('href'));
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // Intersection Observer options
+    const observerOptions = {
+        rootMargin: '0px',
+        threshold: 0.3
+    };
+
+    // Intersection Observer callback
+    const animateOnScroll = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            } else {
+                entry.target.classList.remove('active');
+            }
+        });
+    };
+
+    // Create Intersection Observer for sections
+    const sections = document.querySelectorAll('section');
+    const sectionObserver = new IntersectionObserver(animateOnScroll, observerOptions);
+    sections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+
+    // Continuous scroll animation for elements with .animate-fade-in-up class
+    const animatedElements = document.querySelectorAll('.animate-fade-in-up');
+    let prevScrollY = window.scrollY;
+    const animateOnScrollContinuous = () => {
+        animatedElements.forEach(element => {
+            const distanceToTop = element.getBoundingClientRect().top;
+            const elementHeight = element.clientHeight;
+            const triggerPoint = window.innerHeight - elementHeight * 0.5;
+
+            if (distanceToTop <= triggerPoint && distanceToTop >= -elementHeight * 0.5) {
+                element.classList.add('active');
+            } else {
+                element.classList.remove('active');
+            }
+        });
+    };
+
+    // Call the function on initial load and on scroll
+    animateOnScrollContinuous();
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+
+        if (scrolled > prevScrollY) {
+            // Scrolling down
+            sections.forEach(section => {
+                const distanceToTop = section.getBoundingClientRect().top;
+                const elementHeight = section.clientHeight;
+
+                if (distanceToTop <= window.innerHeight - elementHeight * 0.5 && distanceToTop >= -elementHeight * 0.5) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+        } else {
+            // Scrolling up
+            sections.forEach(section => {
+                const distanceToBottom = section.getBoundingClientRect().bottom;
+                const elementHeight = section.clientHeight;
+
+                if (distanceToBottom <= window.innerHeight + elementHeight * 0.5 && distanceToBottom >= elementHeight * 0.5) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+        }
+
+        animateOnScrollContinuous();
+        prevScrollY = scrolled;
+    });
+</script>
+<script>
+ // Intersection Observer options
+const observerOptions = {
+rootMargin: '0px',
+threshold: 0.3
+};
+
+// Intersection Observer callback
+const animateOnScroll = (entries, observer) => {
+entries.forEach(entry => {
+    if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+    } else {
+        entry.target.classList.remove('active');
+    }
+});
+};
+
+// Create Intersection Observer for sections
+const sections = document.querySelectorAll('.section');
+const sectionObserver = new IntersectionObserver(animateOnScroll, observerOptions);
+sections.forEach(section => {
+sectionObserver.observe(section);
+});
+
+// Smooth scroll on navigation click
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const targetSection = document.querySelector(link.getAttribute('href'));
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+});
+});
+
+// Lazy loading of images
+const lazyImages = document.querySelectorAll('img[data-src]');
+const imageObserver = new IntersectionObserver((entries, observer) => {
+entries.forEach(entry => {
+    if (entry.isIntersecting) {
+        const img = entry.target;
+        img.setAttribute('src', img.getAttribute('data-src'));
+        img.onload = () => {
+            img.removeAttribute('data-src');
+        };
+        imageObserver.unobserve(img);
+    }
+});
+}, {
+rootMargin: '100px'
+});
+
+lazyImages.forEach(image => {
+imageObserver.observe(image);
+});
+
+</script>
+<script>
+function scrollToSection(sectionId) {
+const section = document.querySelector(sectionId);
+if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+}
+}
+
+</script>
+<script>
+    // Smooth scroll on navigation click
+    const navLinks = document.querySelectorAll('.nav-btn');
+    navLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetSection = document.querySelector(link.getAttribute('href'));
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // ... (previously defined JavaScript code) ...
+    
+    function scrollToSection(sectionId) {
+        const section = document.querySelector(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
 </body>
 </body>
 </html> 
