@@ -16,17 +16,20 @@
         <img src="your_profile_picture.jpg" alt="Your Name">
     </div>
      <!-- Navigation Bar -->
-<nav class="grid">
-    <div class="nav-links">
-        <button class="nav-btn" onclick="scrollToSection('#home')">Home</button>
-        <button class="nav-btn" onclick="scrollToSection('#about')">About</button>
-        <button class="nav-btn" onclick="scrollToSection('#skills')">Skills</button>
-        <button class="nav-btn" onclick="scrollToSection('#projects')">Projects</button>
-        <button class="nav-btn" onclick="scrollToSection('#testimonials')">Testimonials</button>
-        <button class="nav-btn" onclick="scrollToSection('#contact')">Contact</button>
-    </div>
-     
-</nav>
+     <nav>
+        <div class="nav-links">
+            <button class="nav-btn" onclick="scrollToSection('#home')">Home</button>
+            <button class="nav-btn" onclick="scrollToSection('#about')">About</button>
+            <button class="nav-btn" onclick="scrollToSection('#skills')">Skills</button>
+            <button class="nav-btn" onclick="scrollToSection('#projects')">Projects</button>
+            <button class="nav-btn" onclick="scrollToSection('#testimonials')">Testimonials</button>
+            <button class="nav-btn" onclick="scrollToSection('#contact')">Contact</button>
+        </div>
+    </nav>
+    
+    <!-- Your other sections go here -->
+    
+    
       
      <!-- Home Section -->
      <section id="home" class="grid" class="section">
@@ -48,6 +51,7 @@
      <!-- Skills Section -->
      <section id="skills" class="grid" class="section">
             <h2>Skills</h2>
+            <div class="skills-slider">
             <div class="skills-content">
             <div class="skill-category">
                 <div class="skill-card">
@@ -142,6 +146,7 @@
             </div>
             </div>
         </div>
+    </div>
     </section>
     <!-- Projects Section -->
     <!-- Projects Section -->
@@ -347,29 +352,15 @@ lazyImages.forEach(image => {
 
 </script>
 <script>
-    // Function to update the position of the profile picture on scroll
-function updateProfilePicturePosition() {
-  const profilePicture = document.querySelector(".profile-picture");
-  const header = document.querySelector("header");
-
-  const headerHeight = header.offsetHeight;
-  const scrollTop = window.scrollY;
-
-  // Calculate the top position for the profile picture
-  const topPosition = Math.min(headerHeight - 50, Math.max(20, 20 - scrollTop));
-
-  profilePicture.style.top = topPosition + "px";
+    function scrollToSection(sectionId) {
+    const section = document.querySelector(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
-// Event listener for the scroll event
-window.addEventListener("scroll", () => {
-  updateProfilePicturePosition();
-});
-
-// Call the function on page load to set the initial position of the profile picture
-window.addEventListener("load", () => {
-  updateProfilePicturePosition();
-});
+</script>
+<script>
 
 </script>
        
