@@ -1,4 +1,4 @@
- 
+  
 /* Reset some default styles */
 body, h1, h2, h3, p, ul, li, blockquote, form, label, input, textarea, button {
     margin: 0;
@@ -1039,3 +1039,63 @@ nav {
 .nav-btn:hover {
     background-color: rgb(17, 11, 1); /* Button background color on hover */
 }
+
+ 
+ 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    position: relative;
+    background-image: url("background_image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  header {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+  }
+  
+  .profile-picture {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    border-radius: 50%;
+    border: 2px solid #fff;
+  }
+  
+  /* Add your styles for the navigation menu and about section here */
+  
+  /* Add media queries for responsiveness */
+  
+  /* For desktop devices */
+  @media screen and (min-width: 1024px) {
+    .container {
+      padding: 50px;
+    }
+  }
+  
+  /* For tablet devices */
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    .container {
+      padding: 30px;
+      background-size: contain;
+      background-position: top;
+    }
+  }
+  
+  /* For mobile devices */
+  @media screen and (max-width: 767px) {
+    .container {
+      padding: 20px;
+      background-size: contain;
+      background-position: top;
+    }
+  }
+  
