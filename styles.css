@@ -1207,3 +1207,109 @@ footer {
     
     /* Add any other necessary adjustments for responsiveness */
 }
+
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set box-sizing to border-box for all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Set a default font for the page */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Global styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Background Image */
+.background-image {
+    /* Add your background image styles here */
+}
+
+/* Navigation Bar */
+nav {
+    /* Add your navigation styles here */
+}
+
+.nav-links {
+    /* Add your navigation links styles here */
+}
+
+.nav-btn {
+    /* Add your navigation button styles here */
+}
+
+/* Home Section */
+#home {
+    /* Add your home section styles here */
+}
+
+/* About Section */
+#about {
+    /* Add your about section styles here */
+}
+
+/* Skills Section */
+#skills {
+    /* Remove background color */
+    background-color: transparent;
+}
+
+.skills-content {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    margin-top: 30px;
+}
+
+.skill-category {
+    /* Remove fixed width to allow flexible sizing */
+    flex: 0 0 auto;
+    padding: 20px;
+}
+
+/* Skill Cards */
+.skill-card {
+    /* Add styles for each skill card */
+}
+
+/* Projects Section */
+#projects {
+    /* Add your projects section styles here */
+}
+
+/* Testimonials Section */
+#testimonials {
+    /* Add your testimonials section styles here */
+}
+
+/* Contact Section */
+#contact {
+    /* Add your contact section styles here */
+}
+
+/* Footer */
+footer {
+    /* Add your footer styles here */
+}
+
+/* Responsive styles for tablet and mobile devices */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for tablet and mobile devices here */
+    
+    /* For example, make each skill card take full width on small screens */
+    .skill-category {
+        min-width: 100%;
+    }
+    
+    /* Add any other necessary adjustments for responsiveness */
+}
