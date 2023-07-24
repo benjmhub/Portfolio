@@ -1101,53 +1101,109 @@ body {
 
 
   
-  /* Global Styles */
-body {
-    font-family: Arial, sans-serif;
+  /* styles.css */
+
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
 }
 
+/* Set box-sizing to border-box for all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Set a default font for the page */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Global styles */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-    /* Mobile and Tablet Styles */
-    .profile-picture img {
-        max-width: 100%;
-        height: auto;
-    }
+/* Background Image */
+.background-image {
+    /* Add your background image styles here */
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    /* Tablet Styles */
-    .container {
-        padding: 10px;
-    }
+/* Navigation Bar */
+nav {
+    /* Add your navigation styles here */
 }
 
- /* Section Styles */
-.section {
-    padding: 40px 0;
+.nav-links {
+    /* Add your navigation links styles here */
 }
 
-/* Other CSS styles for the rest of the sections... */
+.nav-btn {
+    /* Add your navigation button styles here */
+}
 
-/* Footer Styles */
+/* Home Section */
+#home {
+    /* Add your home section styles here */
+}
+
+/* About Section */
+#about {
+    /* Add your about section styles here */
+}
+
+/* Skills Section */
+#skills {
+    /* Remove background color */
+    background-color: transparent;
+}
+
+/* Skill Categories */
+.skills-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.skill-category {
+    /* Add styles for each skill category */
+}
+
+.skill-card {
+    /* Add styles for each skill card */
+}
+
+/* Projects Section */
+#projects {
+    /* Add your projects section styles here */
+}
+
+/* Testimonials Section */
+#testimonials {
+    /* Add your testimonials section styles here */
+}
+
+/* Contact Section */
+#contact {
+    /* Add your contact section styles here */
+}
+
+/* Footer */
 footer {
-    text-align: center;
-    background-color: #050303;
-    color: #fff;
-    padding: 20px;
+    /* Add your footer styles here */
 }
 
-/* Responsive styles for footer */
+/* Responsive styles for tablet and mobile devices */
 @media screen and (max-width: 768px) {
-    footer p {
-        font-size: 14px;
+    /* Adjust styles for tablet and mobile devices here */
+    
+    /* For example, you can change the grid layout to a single column */
+    .skills-content {
+        grid-template-columns: 1fr;
     }
+    
+    /* Add any other necessary adjustments for responsiveness */
 }
