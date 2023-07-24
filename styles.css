@@ -1027,7 +1027,7 @@ nav {
 
 .nav-btn {
     color: #ffffff;
-    background-color: rgb(110, 3, 18); /* Button background color */
+    background-color: rgb(204, 119, 8); /* Button background color */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -1098,4 +1098,56 @@ body {
       background-position: top;
     }
   }
+
+
   
+  /* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Mobile and Tablet Styles */
+    .profile-picture img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Tablet Styles */
+    .container {
+        padding: 10px;
+    }
+}
+
+ /* Section Styles */
+.section {
+    padding: 40px 0;
+}
+
+/* Other CSS styles for the rest of the sections... */
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: #050303;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Responsive styles for footer */
+@media screen and (max-width: 768px) {
+    footer p {
+        font-size: 14px;
+    }
+}
