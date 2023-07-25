@@ -2120,6 +2120,7 @@ footer {
 }
 
 
+ 
 /* styles.css */
 
 /* Reset default margin and padding */
@@ -2143,6 +2144,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    position: relative; /* Add this to the container */
 }
 
 /* Background Image */
@@ -2249,6 +2251,7 @@ footer {
         position: absolute;
         top: 20px;
         right: 20px;
+        z-index: 1;
     }
 
     nav {
@@ -2256,16 +2259,17 @@ footer {
         background-color: transparent;
         padding: 10px;
         border-radius: 5px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
 
     .nav-links {
         /* Add styles for the navigation links on mobile */
         display: flex;
-        gap: 20px;
+        gap: 10px;
         background-color: transparent;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
     }
 
     .nav-btn {
@@ -2282,10 +2286,4 @@ footer {
         text-align: center;
         margin-top: 100px;
     }
-
-    /* Display navigation bar when user scrolls to the top */
-    .show-nav {
-        display: flex;
-    }
 }
-
