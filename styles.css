@@ -2125,6 +2125,8 @@ footer {
 
 /* styles.css */
 
+ /* styles.css */
+
 /* Reset default margin and padding */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
@@ -2260,7 +2262,6 @@ footer {
         background-color: transparent;
         padding: 10px;
         border-radius: 5px;
-        top: 20px;
     }
 
     .nav-links {
