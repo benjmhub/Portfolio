@@ -1863,6 +1863,9 @@ nav {
 /* styles.css */
 
 /* ... (existing styles) */
+ /* styles.css */
+
+/* ... (existing styles) */
 
 /* Navigation Bar */
 nav {
@@ -1908,5 +1911,8 @@ nav {
         flex-direction: column;
         align-items: flex-start; /* Align the navigation links to the left */
         gap: 10px;
+        background-color: rgba(0, 0, 0, 0.8); /* Add a background color for the navigation bar on mobile */
+        padding: 10px;
+        border-radius: 5px;
     }
 }
