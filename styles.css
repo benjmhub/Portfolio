@@ -1859,3 +1859,54 @@ nav {
         gap: 10px;
     }
 }
+
+/* styles.css */
+
+/* ... (existing styles) */
+
+/* Navigation Bar */
+nav {
+    position: relative;
+    background-color: transparent;
+}
+
+.nav-links {
+    /* Add your navigation links styles here */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-btn {
+    /* Add your navigation button styles here */
+    padding: 10px 20px;
+    border: none;
+    background-color: chocolate; /* Change the background color to chocolate */
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Responsive styles for mobile screens */
+@media screen and (max-width: 768px) {
+    .profile-picture {
+        /* Add styles for the profile picture on mobile */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav {
+        /* Add styles for the navigation bar on mobile */
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .nav-links {
+        /* Add styles for the navigation links on mobile */
+        flex-direction: column;
+        align-items: flex-start; /* Align the navigation links to the left */
+        gap: 10px;
+    }
+}
