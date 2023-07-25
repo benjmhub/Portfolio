@@ -1864,6 +1864,7 @@ nav {
 
 /* ... (existing styles) */
  /* styles.css */
+ /* styles.css */
 
 /* ... (existing styles) */
 
@@ -1890,29 +1891,42 @@ nav {
     cursor: pointer;
 }
 
+/* Profile Picture */
+.profile-picture {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
 /* Responsive styles for mobile screens */
 @media screen and (max-width: 768px) {
     .profile-picture {
         /* Add styles for the profile picture on mobile */
-        position: absolute;
-        top: 20px;
-        right: 20px;
+        position: relative;
+        top: unset;
+        right: unset;
+        margin-bottom: 20px;
     }
 
     nav {
         /* Add styles for the navigation bar on mobile */
-        position: absolute;
-        top: 20px;
-        left: 20px;
+        position: relative;
+        top: unset;
+        left: unset;
+        margin-bottom: 20px;
     }
 
     .nav-links {
         /* Add styles for the navigation links on mobile */
         flex-direction: column;
-        align-items: flex-start; /* Align the navigation links to the left */
-        gap: 10px;
-        background-color: rgba(0, 0, 0, 0.8); /* Add a background color for the navigation bar on mobile */
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
         padding: 10px;
         border-radius: 5px;
+    }
+
+    /* Add styles for the title on mobile */
+    h1 {
+        text-align: center;
     }
 }
