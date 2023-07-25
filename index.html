@@ -264,7 +264,7 @@
     <div class="contact-content">
         <div class="contact-form">
             <h2>Contact Me</h2>
-            <form id="contactForm">
+            <form id="contactForm" action="contact.php" method="post">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -640,8 +640,59 @@ if (section) {
 
 </script>
 <script>
-    
+    // Smooth scroll and other JS code (previously defined)
+
+    // Submit contact form using AJAX
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const formData = new FormData(form);
+
+        fetch("contact.php", {
+            method: "POST",
+            body: formData,
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            if (data.status === "success") {
+                alert(data.message); // Display success message
+                form.reset(); // Clear the form after successful submission
+            } else {
+                alert(data.message); // Display error message
+            }
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+        });
+    });
 </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contactForm");
+
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(contactForm);
+            const xhr = new XMLHttpRequest();
+
+            xhr.open("POST", "contact.php", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                    const response = JSON.parse(xhr.responseText);
+                    alert(response.message); // You can show a success message to the user
+                    contactForm.reset(); // Reset the form after successful submission
+                } else {
+                    alert("Failed to send message. Please try again later."); // Show an error message
+                }
+            };
+
+            xhr.send(formData);
+        });
+    });
+</script>
+
 </body>
 </body>
 </html> 
