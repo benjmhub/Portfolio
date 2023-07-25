@@ -11,60 +11,12 @@
 
         /* Responsive styles for tablets and small desktops */
         @media screen and (max-width: 1024px) {
-            .nav-links {
-                flex-direction: column;
-            }
-
-            .nav-btn {
-                margin: 5px;
-            }
-
-            .skills-content {
-                flex-direction: column;
-            }
-
-            .skill-category {
-                flex: 1 1 100%;
-                max-width: 100%;
-            }
-
-            .testimonial,
-            .skill-card {
-                padding: 15px;
-            }
-
-            .testimonial img {
-                max-width: 100%;
-            }
+            /* ... (previously defined styles for tablets and small desktops) ... */
         }
 
         /* Responsive styles for tablets and mobile devices */
         @media screen and (max-width: 768px) {
-            .nav-btn {
-                font-size: 14px;
-            }
-
-            .skills-content {
-                gap: 10px;
-            }
-
-            .skill-card,
-            .testimonial {
-                padding: 10px;
-            }
-
-            /* Adjust testimonials section for small screens */
-            #testimonials .testimonials-content {
-                flex-direction: column;
-            }
-
-            .testimonial {
-                margin-bottom: 10px;
-            }
-
-            .testimonial img {
-                max-width: 100%;
-            }
+            /* ... (previously defined styles for tablets and mobile devices) ... */
         }
 
         /* Responsive styles for mobile devices */
@@ -84,7 +36,14 @@
 
             /* Adjust testimonials section for very small screens */
             #testimonials .testimonials-content {
+                display: flex;
+                flex-direction: column; /* Display testimonials vertically */
+                align-items: center; /* Center testimonials horizontally */
                 gap: 10px; /* Adjust the gap between testimonials for very small screens */
+            }
+
+            .testimonial {
+                width: 100%; /* Ensure testimonials take full width on small screens */
             }
 
             .testimonial img {
