@@ -1626,10 +1626,47 @@ footer {
         gap: 10px;
     }
 
-   
+     
 
     /* Show the navigation button to open the navigation links on mobile */
     .nav-btn {
         display: block;
     }
 }
+
+
+/* styles.css */
+
+/* ... your existing styles ... */
+
+/* Skills Section */
+#skills {
+    /* Remove background color */
+    background-color: transparent;
+    overflow-x: auto; /* Enable horizontal scrolling on mobile and desktop */
+}
+
+.skills-slider {
+    display: flex;
+    /* Add some margin to give space between the categories */
+    margin: 0 20px;
+}
+
+.skill-category {
+    /* Add styles for each skill category */
+    background-color: rgba(84, 94, 2, 0.5); /* Black background with transparency */
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 300px; /* Set a minimum width to ensure each category is easily readable */
+}
+
+.skill-card {
+    /* Add styles for each skill card */
+    /* Set text color to white so it's visible on the dark background */
+    color: white;
+}
+
+ 
+  
+  
+  
