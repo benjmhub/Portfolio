@@ -2118,3 +2118,174 @@ footer {
         display: flex;
     }
 }
+
+
+/* styles.css */
+
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set box-sizing to border-box for all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Set a default font for the page */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Global styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Background Image */
+.background-image {
+    /* Add your background image styles here */
+}
+
+/* Profile Picture */
+.profile-picture {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
+/* Navigation Bar */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    background-color: transparent;
+}
+
+.nav-btn {
+    background-color: transparent;
+    color: chocolate;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Home Section */
+#home {
+    /* Add your home section styles here */
+}
+
+/* About Section */
+#about {
+    /* Add your about section styles here */
+}
+
+/* Skills Section */
+#skills {
+    /* Add your skills section styles here */
+}
+
+/* Skill Categories */
+.skills-content {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+}
+
+.skill-category {
+    /* Add styles for each skill category */
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    flex: 0 0 auto;
+    min-width: 300px;
+}
+
+.skill-card {
+    /* Add styles for each skill card */
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Projects Section */
+#projects {
+    /* Add your projects section styles here */
+}
+
+/* Testimonials Section */
+#testimonials {
+    /* Add your testimonials section styles here */
+}
+
+/* Contact Section */
+#contact {
+    /* Add your contact section styles here */
+}
+
+/* Footer */
+footer {
+    /* Add your footer styles here */
+}
+
+/* Responsive styles for tablet and mobile devices */
+@media screen and (max-width: 768px) {
+    .profile-picture {
+        /* Add styles for the profile picture on mobile */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav {
+        /* Add styles for the navigation bar on mobile */
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links {
+        /* Add styles for the navigation links on mobile */
+        display: flex;
+        gap: 20px;
+        background-color: transparent;
+    }
+
+    .nav-btn {
+        /* Add styles for the navigation buttons on mobile */
+        background-color: transparent;
+        color: chocolate;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    /* Add styles for the title on mobile */
+    h1 {
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    /* Display navigation bar when user scrolls to the top */
+    .show-nav {
+        display: flex;
+    }
+}
+
