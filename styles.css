@@ -1551,6 +1551,9 @@ footer {
  
  /* styles.css */
 
+ /* styles.css */
+ /* styles.css */
+
 /* Add a new CSS class to adjust navigation position for mobile */
 .nav-container {
     display: flex;
@@ -1578,13 +1581,13 @@ footer {
         gap: 10px;
     }
 
-    /* Hide the profile picture on mobile */
+    /* Show the profile picture on mobile */
     .profile-picture {
-        display: none;
+        display: block;
     }
 
-    /* Show the navigation button to open the navigation links on mobile */
+    /* Hide the navigation button to open the navigation links on mobile */
     .nav-btn {
-        display: block;
+        display: none;
     }
 }
