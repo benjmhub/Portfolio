@@ -1549,4 +1549,42 @@ footer {
 }
 
  
- 
+ /* styles.css */
+
+/* Add a new CSS class to adjust navigation position for mobile */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Adjust navigation links for mobile */
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+/* Add a media query for mobile devices */
+@media screen and (max-width: 768px) {
+    /* Move navigation to the top left corner */
+    .nav-container {
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    /* Adjust navigation links for mobile */
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Hide the profile picture on mobile */
+    .profile-picture {
+        display: none;
+    }
+
+    /* Show the navigation button to open the navigation links on mobile */
+    .nav-btn {
+        display: block;
+    }
+}
