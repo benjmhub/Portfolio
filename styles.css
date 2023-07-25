@@ -1668,5 +1668,51 @@ footer {
 
  
   
-  
-  
+ 
+
+/* styles.css */
+
+/* Other styles for your website go here */
+
+/* Social Links Section */
+#social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links-content {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    color: #ffffff;
+    background-color: black;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+}
+
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .social-links-content {
+        flex-wrap: wrap;
+    }
+
+    .social-icon {
+        margin: 5px 10px;
+    }
+}
