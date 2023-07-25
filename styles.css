@@ -1626,10 +1626,7 @@ footer {
         gap: 10px;
     }
 
-    /* Hide the profile picture on mobile */
-    .profile-picture {
-        display: none;
-    }
+   
 
     /* Show the navigation button to open the navigation links on mobile */
     .nav-btn {
