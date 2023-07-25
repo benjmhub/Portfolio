@@ -1891,45 +1891,8 @@ nav {
     cursor: pointer;
 }
 
-/* Profile Picture */
-.profile-picture {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
+ 
 
-/* Responsive styles for mobile screens */
-@media screen and (max-width: 768px) {
-    .profile-picture {
-        /* Add styles for the profile picture on mobile */
-        position: relative;
-        top: unset;
-        right: unset;
-        margin-bottom: 20px;
-    }
-
-    nav {
-        /* Add styles for the navigation bar on mobile */
-        position: relative;
-        top: unset;
-        left: unset;
-        margin-bottom: 20px;
-    }
-
-    .nav-links {
-        /* Add styles for the navigation links on mobile */
-        flex-direction: column;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    /* Add styles for the title on mobile */
-    h1 {
-        text-align: center;
-    }
-}
 
 /* styles.css */
 
@@ -1946,53 +1909,9 @@ nav {
 @media screen and (max-width: 768px) {
     .profile-picture {
         /* Add styles for the profile picture on mobile */
-        position: relative;
-        top: unset;
-        right: unset;
-        margin-bottom: 20px;
-    }
-
-    nav {
-        /* Add styles for the navigation bar on mobile */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    .nav-links {
-        /* Add styles for the navigation links on mobile */
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        background-color: transparent;
-    }
-
-    /* Add styles for the title on mobile */
-    h1 {
-        text-align: center;
-    }
-}
-/* styles.css */
-
-/* ... (existing styles) */
-
-/* Profile Picture */
-.profile-picture {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-/* Responsive styles for mobile screens */
-@media screen and (max-width: 768px) {
-    .profile-picture {
-        /* Add styles for the profile picture on mobile */
-        position: relative;
-        top: unset;
-        right: unset;
+        position: absolute;
+        top: 20px;
+        right: 20px;
         margin-bottom: 20px;
     }
 
