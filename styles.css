@@ -1665,6 +1665,10 @@ footer {
     /* Set text color to white so it's visible on the dark background */
     color: white;
 }
+/* CSS */
+.social-links a {
+   margin-right: 20px; /* You can adjust this value to control the space between icons */
+}
 
  
   
