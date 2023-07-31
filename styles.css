@@ -1671,22 +1671,7 @@ footer {
 }
 
 
-/* ... (previously defined styles) ... */
-
-    /* Add this new CSS class for the project links */
-    .project-link {
-        color: green; /* Set the link color to green */
-    }
-
-    .project-link:hover {
-        color: purple; /* Set the link color to purple on hover */
-    }
-
-    /* Responsive styles for tablets and small desktops */
-    @media screen and (max-width: 1024px) {
-        /* ... (previously defined styles for tablets and small desktops) ... */
-    }
-
+ 
     /* ... (rest of the CSS styles) ... */
  
 
